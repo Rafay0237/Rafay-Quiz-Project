@@ -1,0 +1,112 @@
+[
+    {
+        "id":1,
+        "statement":"What is The Capital City Of Spain ?",
+        "options":[
+            "Barcelona",
+            "Los-Angeles",
+            "Madrid",
+            "Monaco"
+        ] ,
+        "ans":"Madrid"
+    },
+    {
+        "id":2,
+        "statement":"What is The Capital City Of Nethterlands ?",
+        "options":[
+            "Oslo",
+            "Amsterdam",
+            "San-Fracisco",
+            "Sydney"
+        ] ,
+        "ans":"Amsterdam"
+    },
+    {
+        "id":3,
+        "statement":"What is The Capital City Of Saudia Arabia ?",
+        "options":[
+            "Jeddah",
+            "Riyadh",
+            "Makkah",
+            "Madinah"
+        ] ,
+        "ans":"Riyadh"
+    },
+    {
+        "id":4,
+        "statement":"What is The Capital City Of China ?",
+        "options":[
+            "Shangai",
+            "Jakarta",
+            "Bejieng",
+            "Chicago"
+        ] ,
+        "ans":"Bejieng"
+    },
+    {
+        "id":5,
+        "statement":"What is The Capital City Of Thailand ?",
+        "options":[
+            "Bangkok",
+            "Hong-Kong",
+            "Berlin",
+            "Vienna"
+        ] ,
+        "ans":"Bangkok"
+    },
+    {
+        "id":6,
+        "statement":"What is The Capital City Of Australia ?",
+        "options":[
+            "Oslo",
+            "Canberra",
+            "Bejieng",
+            "Monaco"
+        ] ,
+        "ans":"Canberra"
+    },
+    {
+        "id":7,
+        "statement":"What is The Capital City Of Cuba ?",
+        "options":[
+            "San Jose",
+            "Ottawa",
+            "Havana",
+            "Sofia"
+        ] ,
+        "ans":"Havana"
+    },
+    {
+        "id":8,
+        "statement":"3.What is The Capital City Of Norway ?",
+        "options":[
+            "Oslo",
+            "Doha",
+            "Muscat",
+            "Cairo"
+        ] ,
+        "ans":"Oslo"
+    },
+    {
+        "id":9,
+        "statement":"What is The Capital City Of Syria ?",
+        "options":[
+            "Ankara",
+            "Muscat",
+            "Singapore",
+            "Damascus"
+        ] ,
+        "ans":"Damascus"
+    },
+    {
+        "id":10,
+        "statement":"What is The Capital City Of Ukraine ?",
+        "options":[
+            "Kyiv",
+            "Dublin",
+            "Jakarta",
+            "Amman"
+        ] ,
+        "ans":"Kyiv"
+    }
+]
