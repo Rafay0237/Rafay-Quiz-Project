@@ -34,7 +34,7 @@ const getBtnClass=(q,attempts)=>{
   }
 }
 const getTimerClass=(timer)=>{
-  if(timer<6 && timer!=0)
+  if(timer<6 && timer!==0)
   return'timer-low';
   else{
     return'timer-id';
