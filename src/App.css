@@ -1,7 +1,8 @@
 
 .App{
   display: flex;
-  background-color:rgb(149, 169, 108);
+  background-color:rgb(250, 250, 250);
+  background-color: hsl(0, 0%, 98%);
   align-items: center;
   justify-content: center;
   height: 700px;
@@ -13,10 +14,13 @@
   height: 80%;
   width: 75%;
   border-radius: 10px;
-  overflow: hidden;}
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .box-h{
   display: flex;
-  background-color: cadetblue;
+  background-color: rgb(1, 126, 116);
+  background-color: hsl(175, 98%, 25%);
   color: #fdfdfd;
   height: 60px;
   width: 100%;
@@ -30,32 +34,32 @@
 #web-name{
    margin-left: 20px;
 }
-/* #loader{
-  height: 30px;
-  width: 10px;
-  padding: 0px 15px;
-  border-radius: 50%;
-  border: 5px solid #ddd ;
-  border-top-color:#333 ;
-  animation: rotate 9s linear;
-} */
+
 #timer-id{
-  padding: 0px 15px;
-  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 15px;
+  padding-top: 1px;
 }
 #timer-low{
-  padding: 0px 15px;
-  padding-top: 2px;
+  padding-left: 10px;
+  padding-right: 15px;
+  padding-top: 1px;
   font-weight: 700;
-  color: rgb(160, 0, 0);
+  color: rgb(154, 34, 34);
+  color: (0, 0%, 91%);
+  animation: blink 1s linear infinite;
 }
-
-/* @keyframes rotate{
-  0%{ transform: rotate(0deg);}
-  100%{
-    transform: rotate(360deg);
+@keyframes blink{
+  0%{
+    opacity: 1;
   }
-} */
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 #que-no{
   padding: 0 15px;
 }
@@ -71,14 +75,17 @@
 #Start{
   padding: 22px 74px;
   margin-bottom: 15px;
-  background-color:#fff;
-  border-radius: 15px;
-  border: 4px rgb(92, 153, 219);
-  color: lightskyblue;
+  background-color: rgb(11, 50, 89);
+  background-color:hsl(210, 78%, 20%);
+  border-radius: 8px;
+  border: 3px solid black;
+  color: #fff;
+  font-size: large;
   font-weight:700;
+  
 }
 #Start:hover{
-  border: 4px solid rgb(43, 43, 103) ;
+  background-color: rgb(10, 44, 78);
 }
 .Q-box{
   height: 170px;
@@ -88,7 +95,8 @@
   text-align: center;
   font-size: x-large;
   color: #fdfdfd;
-  background-color: cadetblue;
+  background-color: rgb(200, 65, 1);
+  background-color: hsl(19, 99%, 40%);
   margin-left: 250px;
   border-radius: 10px;
 }
@@ -98,7 +106,9 @@
 }
 
 .Option{
-  background-color: rgb(184, 197, 156);
+  background-color: rgb(247, 250, 253);
+  background-color: hsl(210, 60%, 98%);
+  border: 2px solid rgb(212, 231, 247);
   color: black;
   margin: 20px;
   padding: 5px;
@@ -110,7 +120,8 @@
   padding-top: 10px;
 }
 .Option-right{
-  background-color: rgb(215, 215, 245);
+  background-color: rgb(247, 250, 253);
+  background-color: hsl(210, 60%, 98%);
   color: black;
   margin: 20px;
   padding: 5px;
@@ -120,10 +131,17 @@
   height: 30px;
   padding-top: 10px;
   font-weight: 500;
-  border: 2px solid green;
+  border: 3px solid rgb(0, 121, 74);
+  border: 3px solid hsl(157, 100%, 24%);
+}
+.Option:hover{
+  border: 2px solid rgb(11, 50, 89);
 }
 .Option-wrong{
-  background-color: rgb(245, 210, 210);
+  border: 3px solid rgb(154, 34, 34);
+  border: 3px solid hsl(0, 64%, 37%);
+  background-color: rgb(247, 250, 253);
+  background-color: hsl(210, 60%, 98%);
   color: black;
   margin: 20px;
   padding: 5px;
@@ -133,7 +151,6 @@
   height: 30px;
   padding-top: 10px;
   font-weight: 500;
-  border: 2px solid red;
 }
 .next-btn{
   background-color: rgb(48, 48, 144);
@@ -173,8 +190,10 @@
   margin-top: 70px;
   border-radius: 5px;
   font-weight: 600;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: cadetblue;
+  background-color: rgb(200, 65, 1);
+  background-color: hsl(19, 99%, 40%);
 }
 #finish p{
   margin-bottom: 10px;
@@ -185,23 +204,46 @@
 }
 
 #play-again{
-  padding: 14px;
+  padding: 20px 35px;
   margin-bottom: 15px;
   background-color:#fff;
-  border-radius: 15px;
-  border: 4px rgb(92, 153, 219);
-  color: lightskyblue;
+  border-radius: 8px;
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(11, 50, 89);
+  font-size: medium;
   font-weight:700;
 }
 #play-again:hover{
-  border: 4px solid rgb(43, 43, 103) ;
+  border: 3px solid rgb(0, 0, 0) ;
 }
 .Reset-nav{
   text-align: center;
   display: flex;
-  margin-top: -5px;
-  padding-left: 260px;
-  column-gap: 270px;
+  text-align: center;
+  font-size: x-large;
+  width: 100%;
+}
+#Reset-nav-score{
+width: 50%;
+padding-top: 10px;
+border-bottom: 4px solid rgb(83, 152, 124);
+}
+#Reset-nav-score-hover{
+  width: 50%;
+  padding-top: 10px;
+  border-bottom: 4px solid black;
+}
+#Reset-nav-answers{
+  width: 50%;
+  padding-top: 10px;
+  border-bottom: 4px solid rgb(83, 152, 124);
+
+}
+#Reset-nav-answers-hover{
+  width: 50%;
+  padding-top: 10px;
+  border-bottom: 4px solid black;
+
 }
 .answers-b{
   height: 700px;
@@ -231,39 +273,52 @@ font-weight: 400;
 #statement{
 padding: 7px 3px;
 background-color: lightcoral;
-border-radius: 3%;
+border-radius: 0px 15px;
 }
 #ans{
   text-align: center;
-  margin: 2px 0px;
+  margin: 10px 0px;
   padding: 4px 3px;
-  background-color: lightslategray;
-  border-radius: 75%;
+  background-color: rgb(216, 234, 252);
+  background-color: hsl(210, 44%, 93%);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
 }
 
 .attempt-col{
+  margin-top: -10px;
   padding: 5px 40px;
   margin-bottom: 300px;
 }
-#attempt{
+#attempt-right{
   text-align: center;
-  margin: 18px 0px;
+  margin: 29px 0px;
   padding: 15px 16px;
-  background-color: lightseagreen;
-  border-radius: 75%;
+  font-weight: 500;
+  color:rgb(11, 50, 89);
+  background-color: rgb(216, 252, 230);
+  background-color: hsl(210, 44%, 93%);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
-/* #attempt-wrong{
+#attempt-wrong{
   text-align: center;
-  margin: 20px 0px;
-  padding: 15px 10px;
-  background-color: rgb(184, 46, 46);
-  border-radius: 75%;
-} */
+  margin: 29px 0px;
+  padding: 15px 16px;
+  font-weight: 500;
+  color:rgb(11, 50, 89);
+  border: 3px solid rgb(154, 34, 34);
+  border: 3px solid hsl(0, 64%, 37%);
+  background-color: rgb(247, 250, 253);
+  background-color: hsl(210, 60%, 98%);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
 
 
 
 
-
+/*                 FOR MOBILE                              */
 
 
 
@@ -272,12 +327,12 @@ border-radius: 3%;
 @media screen and (max-width: 600px) {
 
   .App{
-    height: 750px;
+    height: 850px;
     width: 800px;
   }
   .box{
-    margin-top: -120px;
-    height: 80%;
+    margin-top: 50px;
+    height: 100%;
     width: 75%;
   }
   .box-h{
@@ -317,15 +372,18 @@ border-radius: 3%;
     margin-bottom: 12px;
   }
   .Q-box{
-    height: 170px;
+    height: 250px;
+    width: 75%;
     padding: 25px 20px;
     padding-bottom: 8px;
-    margin-top: 10px;
-    margin-left: 100px;
+    margin-top: 20px;
+    margin-left: 30px;
     font-size: larger;
   }
   .opt-row{
     margin-left: 45px;
+    margin-top: 20px ;
+    margin-bottom: 20px;
   }
   
   .Option{
@@ -345,7 +403,7 @@ border-radius: 3%;
     padding-top: 10px;
   }
   .Option-wrong{
-    margin: 10px;
+    margin: 20px;
     font-size: small;
     padding: 5px 25px;
     width: 20%;
@@ -355,22 +413,24 @@ border-radius: 3%;
     padding-top: 10px;
   }
   .next-btn{
-    padding: 27px;
-    padding: 15px;
+    padding: 16px 18px;
     padding-top: 10px;
-    margin-left: 190px;
-    font-size: large;
+    margin-left: 165px;
+    font-size: x-large;
     display: inline;
   }
   #finish{
-    margin-left: 60px;
+    height: 50%;
+    width: 75%;
+    margin-left: 30px;
     padding: 45px 25px;
-    margin-top: 70px;
+    margin-top: 100px;
   }
   #finish p{
     margin-bottom: 10px;
   }
   #finish h3{
+    margin-top: 100px;
     margin-bottom: -10px;
   }
   .box{
@@ -380,16 +440,18 @@ border-radius: 3%;
     padding: 14px;
     margin-bottom: 15px;
   }
-  .Reset-nav{
-    margin-top: -5px;
-    padding-left: 60px;
-    column-gap: 150px;
-  }
   .answers-b{
-    height: 500px;
+    height: 800px;
     ::-webkit-scrollbar {
       width: 5px;
       }
+  }
+  .attempt-col{
+    margin-top: 0px;
+  }
+  #attempt-wrong{
+   margin-top: 0px;
+   padding-top: 11px;
   }
 
 }

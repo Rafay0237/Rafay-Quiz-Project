@@ -34,14 +34,39 @@ const getBtnClass=(q,attempts)=>{
   }
 }
 const getTimerClass=(timer)=>{
-  if(timer<6)
+  if(timer<6 && timer!=0)
   return'timer-low';
   else{
     return'timer-id';
   }
 
 }
-
+const getResetNavAnsId=(ans)=>{
+  if(ans)
+  {
+    return "Reset-nav-answers"
+  }else{
+    return "Reset-nav-answers-hover"
+    }
+}
+const getResetNavScoreId=(ans)=>{
+  if(ans)
+  {
+    return "Reset-nav-score-hover"
+  }else{
+    return "Reset-nav-score"
+  }
+}
+const getAttemptClass=(que,ans)=>{
+  let found=que.find(q=>q.ans===ans);
+  if(found)
+  {
+    return"attempt-right"
+  }else{
+    return"attempt-wrong"
+  }
+}
+ //              App               //
 function App() {
 
     const select=(q,opt,verify,score,timer)=>{
@@ -85,6 +110,7 @@ function App() {
       }
       const ResetQuiz=()=>{
         setqNo(0);
+        setI(que[0]);
         setattempts([]);
         setScore(0);
         setTimer(15);
@@ -121,14 +147,14 @@ function App() {
         <div className='box'>
           {!start?<>
             <div id="finish"><h3>{'Guess The Capital Quiz !'}</h3><br></br><p>10 Questions</p><br></br> 
-             <button id="Start"onClick={()=>(startQuiz(start))}>{'Start Quiz'}</button></div>
+             <button  id="Start"onClick={()=>(startQuiz(start))}>{'Start Quiz'}</button></div>
           </>
             :(<>
         {ShowResult?<>
          <div className='box-h'>
         <div className='Reset-nav'>
-          <h2 onClick={()=>checkAnswers(true)}>Score</h2>
-          <h2 onClick={()=>checkAnswers(false)}>Answers</h2>
+          <div id={getResetNavAnsId(answers)} onClick={()=>checkAnswers(true)}>Score</div>
+          <div id={getResetNavScoreId(answers)} onClick={()=>checkAnswers(false)}>Answers</div>
         </div>
         </div>
         {!answers?<>
@@ -142,7 +168,7 @@ function App() {
               {
                 que.map(q=>{
                   return(<>
-                    <div id='statement'>{q.id}{q.statement}</div>
+                    <div id='statement'>{q.id}{'. '}{q.statement}</div>
                     <div id='ans'>Correct Answer : {q.ans}</div>
                     </>
                   )
@@ -153,7 +179,7 @@ function App() {
               {
                 attempts.map(q=>{
                   return(
-                    <div id='attempt'>Your Answer : {q.opt}</div>
+                    <div id={getAttemptClass(que,q.opt)}>Your Answer : {q.opt}</div>
                   )
                 })
               }
@@ -166,7 +192,7 @@ function App() {
         <div className='box-h'>
         <h3 id='web-name'>{'Guess the Capital City ! Quiz'}</h3>
         <div className='h-right-elems'>
-        <div id={getTimerClass(timer)}>{'Timer : '}{timer}</div>
+        <div>{'Timer :'}</div><div id={getTimerClass(timer)}>{timer}</div>
         <div id='que-no'>{i.id}{' of 10'}</div>
         <div id='score'>{'Score : '}{score}</div>
         </div>
